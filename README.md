@@ -22,6 +22,13 @@ Design: HTML, CSS, JavaScript
 
 Environment: MATLAB-2014 (used for core simulation and results) 
 
+## 📊 Dataset
+The dataset used for this project is too large for GitHub. You can download it here: 
+
+https://drive.google.com/file/d/18N1rzgXZ-CweeKU89BdI19ObF5BcFW1e/view?usp=sharing
+
+Once downloaded, place the file in the `/dataset` folder.
+
 # 📸 System Preview
 
 Phase 1: Secure Authentication
