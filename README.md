@@ -57,20 +57,19 @@ Once downloaded, place the file in the `/dataset` folder.
 
 # 📸 System Preview
 
- **Phase 1:** Secure Authentication
-The system begins with a secure login to verify the cardholder's identity.
+**Phase 1:** Dataset Initialization
+This phase shows the raw dataset being loaded and normalized. We split the data into 227,451 training records and 56,962 testing records. Normalization ensures that features with different scales (like 'Amount') do not dominate the model training.
 
-![Login Screen](Results/login.png)
+![Data Processing](Results/Output2.png)
 
-**Phase 2:** Transaction Monitoring
-Every transaction is passed through the Fuzzy C-Means logic to check for behavioral deviations.
+ **Phase 2:** Understanding Class Imbalance
+Before training the hybrid model, we analyze the distribution of genuine (Class 0) vs. fraudulent (Class 1) transactions. As seen below, the dataset is heavily imbalanced, requiring advanced techniques like FCM to create accurate profiles.
+![Class Distribution](Results/login.png)
 
-![System Dashboard](Results/dashboard.png)
+### Phase 3: Hybrid Model Training
+Here, we train the Fuzzy C-Means logic and the Neural Network. This graph monitors the **Training vs. Validation Loss** over 100 epochs. A steady convergence (both lines flattening and staying close) indicates that the model is learning effectively without overfitting.
 
-**Phase 3:** Fraud Detection Results
-When a transaction exceeds the "Suspicion Score," the Neural Network flags it.
-
-![Fraud Alert](Results/alert.jpg)
+![Class Distribution](Results/traininggraph.png)
 
 ## 📊 Results & Performance
 The system was evaluated based on its ability to distinguish between genuine transactions and fraudulent ones.
@@ -80,3 +79,8 @@ The system was evaluated based on its ability to distinguish between genuine tra
 * **FCM Clustering:** Successfully categorized users into spending profiles.
 * **Neural Network:** Minimized false alarms by learning from suspicious deviations.
 
+
+### Model Convergence Proof
+This graph is critical. It shows that both the training loss (blue) and validation loss (orange) decreased steadily and flattened out, which is the definition of successful model convergence.
+
+![Loss Graph (Result Proof)](Results/traininggraph.png)
