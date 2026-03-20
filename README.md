@@ -22,6 +22,34 @@ Design: HTML, CSS, JavaScript
 
 Environment: MATLAB-2014 (used for core simulation and results) 
 
+## 🚀 How to Run (Step-by-Step guide)
+To get this project running on your own computer, follow these four simple steps:
+
+1. Prepare the Database
+This project uses MySQL to store and manage transaction data.
+
+Open your MySQL tool (like XAMPP, WAMP, or MySQL Workbench).
+
+Create a new database named fraud_detection.
+
+If you have a .sql file in your project, import it into this new database.
+
+2. Install the Dependencies
+You need to install the Python libraries listed in your requirements.txt file so the code can "talk" to the database and run the math models. Open your terminal in the project folder and run:
+
+Bash
+pip install -r requirements.txt
+
+3. Start the Web Server
+This project uses Django to create the website interface. To start it up, type this in your terminal:
+
+Bash
+python manage.py runserver
+
+4. View the Project
+Open your web browser (Chrome, Edge, etc.) and go to this address:
+http://127.0.0.1:8000/
+
 ## 📊 Dataset
 The dataset used for this project is too large for GitHub. You can download it here: 
 
